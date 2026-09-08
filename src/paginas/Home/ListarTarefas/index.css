@@ -82,3 +82,11 @@ main {
   td:last-child:hover {
     text-decoration: underline;
   }
+
+  a{
+    color:black;
+  }
+
+  a:hover{
+    color:red;
+  }

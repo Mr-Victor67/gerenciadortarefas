@@ -1,5 +1,6 @@
 import './index.css'
 import tarefas from '../../../mook/tarefas';
+import{Link} from 'react-router-dom';
 function ListarTarefas() {
     return (
         <main>
@@ -29,7 +30,7 @@ function ListarTarefas() {
                             <td>{item.id}</td>
                             <td>{item.titulo}</td>
                             <td>{item.responsavel}</td>
-                            <td>ver</td>
+                            <td><Link to={`/tarefa/${item.id}`}>Ver</Link></td>
                         </tr>
                         ))
 }
