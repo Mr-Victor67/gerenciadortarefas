@@ -9,7 +9,7 @@ function CadastrarContato() {
     const [telefone, setTelefone] = useState('')
     const [cidade, setCidade] = useState('')
     const [email, setEmail] = useState('')
-    const [conteúdo, setConteúdo] = useState('')
+    const [conteudo, setConteudo] = useState('')
     const [error, setError] = useState('')
     function cadastrarContato(e){
         e.preventDefault()
@@ -32,7 +32,7 @@ function CadastrarContato() {
             setError("campo email não pode estar vazio!!!")
             return;
         }
-        if (!conteúdo.trim()) {
+        if (!conteudo.trim()) {
             setError("campo conteúdo não pode estar vazio!!!")
             return;
         }
@@ -50,14 +50,14 @@ function CadastrarContato() {
             'telefone':telefone,
             'cidade':cidade,
             'email':email,
-            'conteúdo':conteúdo,
+            'conteudo':conteudo,
         }
         contatos.push (addContato);
         setNome("");
         setTelefone("");
         setCidade("");
         setEmail("");
-        setConteúdo("");
+        setConteudo("");
 
         navigate(-1)
     }catch(error){
@@ -83,19 +83,19 @@ function CadastrarContato() {
                 <div className='formulario'>
                     <form onSubmit={cadastrarContato}>
                         <label>Nome da Tarefa</label>
-                        <input type="text" value={nome} onChange={e=>setTitulo(e.target.value)} />
+                        <input type="text" value={nome} onChange={e=>setNome(e.target.value)} />
                        
                         <label>Telefone</label>
-                        <input type="text" value={telefone} onChange={e=>setResponsavel(e.target.value)} />
+                        <input type="text" value={telefone} onChange={e=>setTelefone(e.target.value)} />
                         
                         <label>Cidade</label>
-                        <input type="text" value={cidade} onChange={e=>setResponsavel(e.target.value)} />
+                        <input type="text" value={cidade} onChange={e=>setCidade(e.target.value)} />
                       
                         <label>Email</label>
-                        <input type="text" value={email} onChange={e=>setResponsavel(e.target.value)} />
+                        <input type="text" value={email} onChange={e=>setEmail(e.target.value)} />
 
                         <label>Conteúdo</label>
-                        <textarea value={conteúdo} onChange={e=>setDescricao(e.target.value)} ></textarea>
+                        <textarea value={conteudo} onChange={e=>setConteudo(e.target.value)} ></textarea>
                         
                        
                         <button type='submit'>Salvar</button>
