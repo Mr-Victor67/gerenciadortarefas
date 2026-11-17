@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './index.css';
 import contatos from '../../mook/contatos';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function CadastrarContato() {
     const navigate = useNavigate();
@@ -36,12 +36,6 @@ function CadastrarContato() {
             setError("campo conteúdo não pode estar vazio!!!")
             return;
         }
-
-
-
-
-
-
      
         try{
         const addContato ={
